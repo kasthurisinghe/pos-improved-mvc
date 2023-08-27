@@ -128,11 +128,10 @@
                   <Font name="Segoe UI" size="12" style="1"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
+                  <StringArray count="3">
                     <StringItem index="0" value="Manage Customer"/>
                     <StringItem index="1" value="Manage Item"/>
                     <StringItem index="2" value="Place Order"/>
-                    <StringItem index="3" value="Order Detail"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -150,6 +149,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Go"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="goButtonActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane2">
               <AuxValues>

@@ -26,21 +26,256 @@ public class OrderView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        basePanel = new javax.swing.JPanel();
+        conteinerPanel = new javax.swing.JPanel();
+        qtyLabel = new javax.swing.JLabel();
+        itemIdLabel = new javax.swing.JLabel();
+        orderIdLabel = new javax.swing.JLabel();
+        dicountLabel = new javax.swing.JLabel();
+        customerLabel = new javax.swing.JLabel();
+        orderIdTextField = new javax.swing.JTextField();
+        discontTextField = new javax.swing.JTextField();
+        customerIdTextField = new javax.swing.JTextField();
+        itemIdTextField = new javax.swing.JTextField();
+        qtyTextField = new javax.swing.JTextField();
+        searchCustomerButton = new javax.swing.JButton();
+        searchItemButton = new javax.swing.JButton();
+        customerlabel = new javax.swing.JLabel();
+        ItemLabel = new javax.swing.JLabel();
+        headerPanel = new javax.swing.JPanel();
+        headerLabel = new javax.swing.JLabel();
+        tablePanel = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        placeOrderButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        qtyLabel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        qtyLabel.setText("QTY :");
+
+        itemIdLabel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        itemIdLabel.setText("Item ID :");
+
+        orderIdLabel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        orderIdLabel.setText("Order ID :");
+
+        dicountLabel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        dicountLabel.setText("Discount  :");
+
+        customerLabel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        customerLabel.setText("Customer ID :");
+
+        orderIdTextField.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+
+        discontTextField.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+
+        customerIdTextField.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+
+        itemIdTextField.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+
+        qtyTextField.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
+        qtyTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                qtyTextFieldActionPerformed(evt);
+            }
+        });
+
+        searchCustomerButton.setFont(new java.awt.Font("Segoe UI Historic", 1, 12)); // NOI18N
+        searchCustomerButton.setText("Search");
+        searchCustomerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchCustomerButtonActionPerformed(evt);
+            }
+        });
+
+        searchItemButton.setFont(new java.awt.Font("Segoe UI Historic", 1, 12)); // NOI18N
+        searchItemButton.setText("Search");
+        searchItemButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchItemButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout conteinerPanelLayout = new javax.swing.GroupLayout(conteinerPanel);
+        conteinerPanel.setLayout(conteinerPanelLayout);
+        conteinerPanelLayout.setHorizontalGroup(
+            conteinerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conteinerPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(conteinerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(conteinerPanelLayout.createSequentialGroup()
+                        .addGroup(conteinerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(itemIdLabel)
+                            .addComponent(qtyLabel))
+                        .addGap(38, 38, 38)
+                        .addGroup(conteinerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(conteinerPanelLayout.createSequentialGroup()
+                                .addComponent(qtyTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(conteinerPanelLayout.createSequentialGroup()
+                                .addComponent(itemIdTextField)
+                                .addGap(6, 6, 6)))
+                        .addGroup(conteinerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(conteinerPanelLayout.createSequentialGroup()
+                                .addComponent(searchItemButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ItemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, conteinerPanelLayout.createSequentialGroup()
+                                .addComponent(dicountLabel)
+                                .addGap(23, 23, 23)
+                                .addComponent(discontTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(conteinerPanelLayout.createSequentialGroup()
+                        .addGroup(conteinerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(customerLabel)
+                            .addComponent(orderIdLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(conteinerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(customerIdTextField)
+                            .addComponent(orderIdTextField))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(searchCustomerButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(customerlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        conteinerPanelLayout.setVerticalGroup(
+            conteinerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(conteinerPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(conteinerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(orderIdLabel)
+                    .addComponent(orderIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(conteinerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(customerLabel)
+                    .addComponent(customerIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchCustomerButton)
+                    .addComponent(customerlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(conteinerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(itemIdLabel)
+                    .addComponent(itemIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchItemButton)
+                    .addComponent(ItemLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(conteinerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(qtyLabel)
+                    .addComponent(qtyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dicountLabel)
+                    .addComponent(discontTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35))
+        );
+
+        headerLabel.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
+        headerLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        headerLabel.setText("Order Detail");
+
+        javax.swing.GroupLayout headerPanelLayout = new javax.swing.GroupLayout(headerPanel);
+        headerPanel.setLayout(headerPanelLayout);
+        headerPanelLayout.setHorizontalGroup(
+            headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(headerLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        headerPanelLayout.setVerticalGroup(
+            headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(headerLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        placeOrderButton1.setFont(new java.awt.Font("Segoe UI Historic", 1, 12)); // NOI18N
+        placeOrderButton1.setText("Place Order");
+
+        javax.swing.GroupLayout tablePanelLayout = new javax.swing.GroupLayout(tablePanel);
+        tablePanel.setLayout(tablePanelLayout);
+        tablePanelLayout.setHorizontalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tablePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tablePanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(placeOrderButton1)))
+                .addContainerGap())
+        );
+        tablePanelLayout.setVerticalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tablePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(placeOrderButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout basePanelLayout = new javax.swing.GroupLayout(basePanel);
+        basePanel.setLayout(basePanelLayout);
+        basePanelLayout.setHorizontalGroup(
+            basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(headerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tablePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(conteinerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        basePanelLayout.setVerticalGroup(
+            basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(basePanelLayout.createSequentialGroup()
+                .addComponent(headerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addComponent(tablePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(basePanelLayout.createSequentialGroup()
+                    .addGap(42, 42, 42)
+                    .addComponent(conteinerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(231, Short.MAX_VALUE)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(basePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(basePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void qtyTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qtyTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_qtyTextFieldActionPerformed
+
+    private void searchCustomerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchCustomerButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchCustomerButtonActionPerformed
+
+    private void searchItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchItemButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchItemButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +313,27 @@ public class OrderView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ItemLabel;
+    private javax.swing.JPanel basePanel;
+    private javax.swing.JPanel conteinerPanel;
+    private javax.swing.JTextField customerIdTextField;
+    private javax.swing.JLabel customerLabel;
+    private javax.swing.JLabel customerlabel;
+    private javax.swing.JLabel dicountLabel;
+    private javax.swing.JTextField discontTextField;
+    private javax.swing.JLabel headerLabel;
+    private javax.swing.JPanel headerPanel;
+    private javax.swing.JLabel itemIdLabel;
+    private javax.swing.JTextField itemIdTextField;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JLabel orderIdLabel;
+    private javax.swing.JTextField orderIdTextField;
+    private javax.swing.JButton placeOrderButton1;
+    private javax.swing.JLabel qtyLabel;
+    private javax.swing.JTextField qtyTextField;
+    private javax.swing.JButton searchCustomerButton;
+    private javax.swing.JButton searchItemButton;
+    private javax.swing.JPanel tablePanel;
     // End of variables declaration//GEN-END:variables
 }

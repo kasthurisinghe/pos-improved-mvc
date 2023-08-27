@@ -59,7 +59,7 @@ public class MenuView extends javax.swing.JFrame {
         );
 
         menuComboBox.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        menuComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manage Customer", "Manage Item", "Place Order", "Order Detail" }));
+        menuComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manage Customer", "Manage Item", "Place Order" }));
         menuComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuComboBoxActionPerformed(evt);
@@ -68,6 +68,11 @@ public class MenuView extends javax.swing.JFrame {
 
         goButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         goButton.setText("Go");
+        goButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                goButtonActionPerformed(evt);
+            }
+        });
 
         jTextPane1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jTextPane1.setText("Welcome to Supermarket, your one-stop shop for all your grocery and household needs. We have a wide selection of fresh produce, meats, seafood, dairy products, baked goods, and more. We also offer a variety of household items, including cleaning supplies, personal care products, and pet supplies.  In addition to our wide selection of products, we also offer a convenient and efficient shopping experience.");
@@ -132,6 +137,19 @@ public class MenuView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_menuComboBoxActionPerformed
 
+    private void goButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goButtonActionPerformed
+
+        if (menuComboBox.getSelectedItem() == "Manage Customer") {
+            new CustomerView().setVisible(true);
+        }
+        if (menuComboBox.getSelectedItem() == "Manage Item") {
+            new ItemView().setVisible(true);
+        }
+        if (menuComboBox.getSelectedItem() == "Place Order") {
+            new OrderView().setVisible(true);
+        }
+    }//GEN-LAST:event_goButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -162,7 +180,10 @@ public class MenuView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuView().setVisible(true);
+                MenuView menuView = new MenuView();
+                menuView.setLocationRelativeTo(null);
+                menuView.setVisible(true);
+
             }
         });
     }
