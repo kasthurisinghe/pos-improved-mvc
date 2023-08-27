@@ -4,17 +4,24 @@
  */
 package pos.improved.mvc.view;
 
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import pos.improved.mvc.controller.CustomerController;
+
 /**
  *
  * @author User
  */
 public class CustomerView extends javax.swing.JFrame {
+    CustomerController customerController;
 
     /**
      * Creates new form CustomerView
      */
     public CustomerView() {
+        customerController=new CustomerController();
         initComponents();
+        loadAllCustomers();
     }
 
     /**
@@ -389,4 +396,15 @@ public class CustomerView extends javax.swing.JFrame {
     private javax.swing.JButton updateCustomerButton;
     private javax.swing.JComboBox<String> yearComboBox;
     // End of variables declaration//GEN-END:variables
+
+    private void loadAllCustomers() {
+        String[] columns={"ID","Name","Address","Postal Code"};
+        DefaultTableModel dtm;
+        dtm=new DefaultTableModel(columns, 0){
+         @override   
+            public  boolean isCellEditable(){
+                return false;
+            }
+        };
+    }
 }
